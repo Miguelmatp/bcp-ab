@@ -1,0 +1,22 @@
+.ctnBanner{
+    background: var(--skyblue-bg);
+    height: 22rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ctnBanner .banner{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: var(--maxW);
+}
+.ctnBanner .banner .ctnTxt{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 30rem;
+}

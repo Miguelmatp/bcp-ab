@@ -3,4 +3,30 @@
   margin: 0;
   font-family: poppins, sans-serif;
   text-decoration: none;
+  line-height: 1.1;
+}
+:root{
+  --maxW: 75rem;
+  --primary: #002a8d;
+  --secundary: #ff7800;
+  --skyblue-bg: #F2F8FF;
+  --skyblue-bg-2: #D9EBFF;
+  --txt: #05386B;
+  --txt: #202e44;
+  --border: 18px;
+  --btn-padding: 8px 16px;
+}
+body{
+  width: 100%;
+}
+button{
+  border: none;
+  padding: var(--btn-padding);
+  border-radius: var(--border);
+  background: var(--secundary);
+  color: white;
+}
+h1{
+  font-size: 3rem;
+  font-weight: 500;
 }
