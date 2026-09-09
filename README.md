@@ -1,75 +1,41 @@
-# React + TypeScript + Vite
+# BCP - Experimento A/B de Landing de Tarjeta de Crédito
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Descripción del proyecto
 
-Currently, two official plugins are available:
+Landing experimental desarrollada en React para evaluar mediante una
+prueba A/B si modificar el color y el mensaje del banner principal
+puede aumentar el porcentaje de clics hacia el formulario de solicitud.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚨 Problema
 
-## React Compiler
+La landing actual presenta un bajo porcentaje de clics hacia el
+formulario de solicitud de tarjeta de crédito.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+El equipo de Growth plantea la siguiente hipótesis:
 
-## Expanding the ESLint configuration
+> Modificar el color y mensaje del banner principal puede aumentar
+> el porcentaje de clics (CTR) hacia el formulario de solicitud.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧪 Hipótesis
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Se probarán dos variantes del banner principal:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Variante A:** fondo azul + CTA "Solicita ahora"
+- **Variante B:** fondo naranja + CTA "Aplica ya"
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+La variante será asignada aleatoriamente por usuario o sesión.
 
-```
+## 🎯 Objetivo
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Desarrollar una landing en React que muestre dos variantes del banner
+principal (A/B), registre eventos clave en GTM y documente el proceso técnico
+de implementación y análisis.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Tecnologías
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+- React
+- TypeScript
+- CSS
+- Google Tag Manager (GTM)
+- Git / GitHub
+- GitHub Pages
