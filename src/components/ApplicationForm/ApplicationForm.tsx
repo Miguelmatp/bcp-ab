@@ -18,7 +18,7 @@ function ApplicationForm() {
   };
 
   return (
-    <section className="ctnApplication">
+    <section id="application" className="ctnApplication">
       <div className="application">
         <div className="applicationTxt">
           <h2>Solicita tu tarjeta</h2>
