@@ -1,14 +1,13 @@
 .ctnApplication{
     width: 100%;
-    padding: 5rem 0;
-    background: var(--skyblue-bg-1);
-        background: linear-gradient(126.97deg, rgb(0, 48, 161) 0.91%, rgb(0, 10, 35) 67.25%);
+    padding: 5rem 2rem;
+    background: linear-gradient(126.97deg, rgb(0, 48, 161) 0.91%, rgb(0, 10, 35) 67.25%);
     position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    box-sizing: border-box;
 }
 .ctnApplication .application{
     width: 100%;
@@ -45,10 +44,12 @@
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    padding: 2rem;
+    padding: 1.5rem;
     background: white;
     border-radius: var(--border);
     width: 25rem;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 .ctnApplication form h2{
     color: var(--primary);
@@ -78,9 +79,6 @@
     border-color: var(--primary);
 }
 
-.ctnApplication form button{
-    align-self: flex-start;
-}
 .ctnApplication .ctnCards{
     position: absolute;
     width: 50%;
@@ -113,4 +111,132 @@
 .ctnApplication .formSuccess{
     font-size: 0.85rem;
     color: #2e7d32;
+}
+/* FORMULARIO */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.65rem;
+    width: 100%;
+}
+
+form .double__form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+form .input-field {
+    position: relative;
+    width: 100%;
+}
+
+/* form .input-field input,
+form .input-field select { */
+form .input-field :is(input,select){
+    width: 100%;
+    border-radius: 0.3rem;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+    height: 2.4rem;
+    /* line-height: 1rem; */
+    border: 0.1rem solid var(--form-input-border);
+    outline: none;
+    background: var(--form-input-bg);
+    color: var(--form-input-color);
+}
+
+/* FORMULARIO INVALIDO */
+
+/* ❌ INPUT inválido (con texto ingresado pero no válido) */
+form .input-field input:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: var(--form-input-border-invalid);
+}
+
+/* ❌ LABEL rojo si el input es inválido y hay algo escrito */
+form .input-field input:invalid:not(:focus):not(:placeholder-shown)~label {
+    top: 0;
+    left: 0.5rem;
+    font-size: 0.7rem;
+    color: var(--form-label-invalid);
+    font-weight: 600;
+    background-color: var(--form-label-invalid-bg);
+    padding: 1px 5px;
+    white-space: nowrap;
+    border-radius: 0.5rem;
+}
+/* FIN DE FORMULARIO INVALIDO */
+
+form .input-field label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    font-size: 0.9rem;
+    transform: translate(0, -50%);
+    pointer-events: none;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+form .input-field select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.3rem center;
+    background-size: 1rem;
+    padding-right: 2.2rem;
+}
+/* FLECHA */
+
+form .input-field input:focus~label,
+form .input-field input:valid~label,
+form .input-field input:disabled[value]:not([value=""])~label,
+form .input-field select:focus~label,
+form .input-field select:valid~label {
+    white-space: nowrap;
+    border-radius: 0.5rem;
+    padding: 1px 5px;
+    top: 0;
+    left: 0.5rem;
+    font-size: 0.7rem;
+    color: var(--form-label);
+    background: var(--form-label-bg);
+    font-weight: 600;
+}
+
+@media(max-width: 1000px){
+    .ctnApplication .ctnCards {
+        width: 20%;
+    }
+}
+@media(max-width: 800px){
+    .ctnApplication form{
+        width: 20rem;
+    }
+    .ctnApplication .applicationTxt{
+        align-items: center;
+        text-align: center;
+    }
+    .ctnApplication{
+        padding: 4rem 2rem;
+        box-sizing: border-box;
+    }
+    .ctnApplication .application{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .ctnApplication .ctnCards {
+        display: none;
+    }
+    .ctnApplication form button{
+        align-self: center;
+    }
 }

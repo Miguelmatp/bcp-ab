@@ -22,13 +22,17 @@ header .header{
     justify-content: space-between;
     max-width: var(--maxW);
     height: 4rem;
+    padding: 0 2rem;
+    box-sizing: border-box
 }
 nav{
     background: var(--skyblue-bg);
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 2rem;
+    height: 24px;
+    padding: 0 2rem;
+    box-sizing: border-box;
 }
 nav .nav {
     width: 100%;
@@ -111,4 +115,22 @@ nav .nav .idioma span{
 .headerNavigation .categoria:hover{
     background: #e5e7eb;
     
+}
+
+@media(max-width:900px){
+    
+    .headerNavigation .categorias{
+        display: none;
+    }
+    nav .nav .idioma{
+        display: none;
+    }
+    nav .nav > div{
+        gap: 1rem;
+    }
+}
+@media(max-width:900px){
+    header .header button span{
+        display: none;
+    }
 }

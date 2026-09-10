@@ -5,6 +5,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .ctnBenefits .benefits{
@@ -14,6 +16,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    padding: 0 2rem;
 }
 
 .ctnBenefits .benefits h2{
@@ -57,4 +60,46 @@
 .ctnBenefits .benefitCard p{
     font-size: 0.9rem;
     color: var(--txt);
+}
+@media (max-width: 900px){
+    .ctnBenefits{
+        padding: 4rem 0;
+    }
+    .ctnBenefits .benefits{
+        box-sizing: border-box;
+        gap: 1rem;
+    }
+
+    .ctnBenefits .ctnCards{
+        width: calc(100% + 4rem);
+        margin-left: -2rem;
+        padding: 2rem;
+        display: flex;
+        justify-content: flex-start;
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;
+    }
+
+    .ctnBenefits .ctnCards::-webkit-scrollbar{
+        display: none;
+    }
+
+    .ctnBenefits .ctnCards .benefitCard{
+        flex: 0 0 18rem;
+        width: 18rem;
+        box-sizing: border-box;
+        scroll-snap-align: center;
+    }
+}
+
+@media (max-width: 400px){
+    .ctnBenefits{
+        padding: 3rem 0;
+    }
 }

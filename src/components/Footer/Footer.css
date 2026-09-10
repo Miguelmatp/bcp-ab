@@ -2,7 +2,8 @@
     width: 100%;
     background: white;
     color: white;
-    padding-top: 3rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
 }
 
 .ctnFooter .footer{
@@ -12,7 +13,7 @@
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 3rem;
-    padding-bottom: 3rem;
+    padding: 2rem 0;
 }
 
 .ctnFooter .footerBrand,
@@ -30,7 +31,7 @@
 
 .ctnFooter .footerBrand p{
     max-width: 16rem;
-    font-size: 0.9rem;
+    font-size: 12px;
     line-height: 1.5;
     opacity: 0.9;
     color: var(--txt);
@@ -73,4 +74,21 @@
 .ctnFooter .footerBottom p{
     font-size: 0.8rem;
     color: var(--txt);
+}
+@media (max-width: 700px){
+    .ctnFooter .footer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+    .footer > div{
+        display: none !important;
+    }
+    .footer .footerBrand{
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 }

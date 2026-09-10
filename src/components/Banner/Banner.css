@@ -6,6 +6,8 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
+    padding: 0 2rem;
+    box-sizing: border-box
 }
 .ctnBanner .banner{
     width: 100%;
@@ -23,6 +25,7 @@
     flex-direction: column;
     gap: 1rem;
     max-width: 25rem;
+    z-index: 5;
 }
 .ctnBanner .banner .ctnImg{
     position: absolute;
@@ -148,4 +151,74 @@
 
 .ctnBanner.banner--b button{
     background-color: var(--primary);
+}
+
+@media(max-width:900px){
+    .ctnBanner .banner .ctnTxt h1{
+        font-size: 2rem;
+    }
+    .ctnBanner .banner{
+        position: initial;
+    }
+}
+@media(max-width:800px){
+    .ctnBanner .ctnCards img {
+        height: 6rem;
+    }
+}
+@media(max-width:700px){
+    .ctnBanner{
+        /* height: 32rem; */
+        padding: 2rem;
+    }
+    .ctnBanner .banner .ctnTxt{
+        width: 100%;
+        max-width: 100%;
+    }
+    .ctnBanner .ctnCards img {
+        height: 5rem;
+    }
+    @keyframes isotipoEntrada{
+        from{
+            transform: translateX(-100vw);
+        }
+
+        to{
+            transform: translateX(15vw);
+        }
+    }
+}
+@media(max-width:650px){
+    .ctnBanner{
+        height: 32rem;
+    }
+    .ctnBanner .banner{
+        flex-direction: column;
+    }
+    .ctnBanner .banner .ctnTxt{
+        justify-content: center;
+        align-items: center;
+    }
+    .ctnBanner .banner .ctnTxt p{
+        text-align: center;
+    }
+    .ctnBanner .banner .ctnTxt h1{
+        text-align: center;
+    }
+    .ctnBanner .banner .ctnTxt h1 br{
+        display: none;
+    }
+    .ctnBanner .banner .ctnImg img{
+        height: 60%;
+        top: 50%;
+    }
+    @keyframes isotipoEntrada{
+        from{
+            transform: translateX(-100vw);
+        }
+
+        to{
+            transform: translateX(-30vw);
+        }
+    }
 }

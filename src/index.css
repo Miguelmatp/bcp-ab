@@ -17,6 +17,28 @@
   --border: 18px;
   --border-color: #EAEFF5;
   --btn-padding: 8px 16px;
+  --rojo: #FF0C29;
+      /* FORMULARIO */
+    --form-title: black;
+    --form-borde: black;
+    --form-bg: transparent;
+    --form-border: black;
+    /* input */
+        --form-input-border: #3E3e3e;
+        --form-input-bg: transparent;
+        --form-input-color: black;
+        --form-input-invalid:var(--rojo);
+        --form-input-border-invalid:var(--rojo);
+    /* label */
+        --form-label:#3E3e3e;
+        --form-label-bg: white;
+        --form-label-invalid:var(--rojo);
+        --form-label-invalid-bg: white;
+    /* select */
+        --form-select-option: black;
+        --form-select-option-bg: var(--bg);
+    /* checkbox */
+        --form-checkbox-txt: black;
 }
 body{
   width: 100%;

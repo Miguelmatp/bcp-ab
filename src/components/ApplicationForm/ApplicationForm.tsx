@@ -71,15 +71,14 @@ function ApplicationForm() {
         <form onSubmit={handleSubmit}>
           <h2>Ingresa tus datos</h2>
 
-          <div className="inputGroup">
+          <div className="input-field">
+            <input id="name" type="text" value={name} onChange={(event) => setName(event.target.value)} placeholder=" " required/>
             <label htmlFor="name">Nombre completo</label>
-
-            <input id="name" type="text" value={name} onChange={(event) => setName(event.target.value)} placeholder="Ingresa tu nombre"/>
           </div>
 
-          <div className="inputGroup">
+          <div className="input-field">
+            <input id="email" type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder=" " required/>
             <label htmlFor="email">Correo electrónico</label>
-            <input id="email" type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="Ingresa tu correo"/>
           </div>
 
           {error && (
