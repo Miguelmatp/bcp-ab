@@ -21,12 +21,19 @@ body{
 }
 button{
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secundary);
   padding: var(--btn-padding);
   border-radius: var(--border);
-  background: var(--secundary);
+  font-size: 14px;
   color: white;
+  gap: 0.5rem;
+  cursor: pointer;
 }
 h1{
   font-size: 3rem;
   font-weight: 500;
+  color: var(--primary);
 }

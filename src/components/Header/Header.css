@@ -112,15 +112,3 @@ nav .nav .idioma span{
     background: #e5e7eb;
     
 }
-.header .ctnCTA{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--secundary);
-    padding: var(--btn-padding);
-    border-radius: var(--border);
-    font-size: 14px;
-    color: white;
-    gap: 0.5rem;
-    cursor: pointer;
-}
