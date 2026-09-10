@@ -103,3 +103,14 @@
 .ctnApplication .ctnCards img:nth-of-type(3){
     transform: rotate(-120deg) translate(-60%, -100%);
 }
+
+
+.ctnApplication .formError{
+    font-size: 0.85rem;
+    color: #d32f2f;
+}
+
+.ctnApplication .formSuccess{
+    font-size: 0.85rem;
+    color: #2e7d32;
+}

@@ -22,6 +22,12 @@ function Banner() {
   });
   
   useEffect(() => {
+    const viewTracked = sessionStorage.getItem("bcp-ab-view-tracked");
+
+    if (viewTracked) {
+      return;
+    }
+
     window.dataLayer = window.dataLayer || [];
 
     window.dataLayer.push({
@@ -31,7 +37,10 @@ function Banner() {
       variant,
       label: `banner_${variant}`
     });
+
+    sessionStorage.setItem("bcp-ab-view-tracked", "true");
   }, [variant]);
+  
   const handleScrollToForm = () => {
     window.dataLayer = window.dataLayer || [];
 
