@@ -1,0 +1,57 @@
+.ctnBenefits{
+    width: 100%;
+    padding: 3rem 0;
+    background: var(--skyblue-bg);
+}
+
+.ctnBenefits .benefits{
+    width: 100%;
+    max-width: var(--maxW);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.ctnBenefits .benefits h2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.ctnBenefits .ctnCards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.ctnBenefits .benefitCard{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem;
+    background: white;
+    border-radius: var(--border);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 1px 1px 0 rgba(82, 112, 148, 0.14), 0 1px 1px 0 rgba(82, 112, 148, 0.12), 0 1px 4px 0 rgba(82, 112, 148, 0.20) !important;
+}
+
+.ctnBenefits .benefitCard svg{
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--primary);
+}
+
+.ctnBenefits .benefitCard h3{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--txt);
+}
+
+.ctnBenefits .benefitCard p{
+    font-size: 0.9rem;
+    color: var(--txt);
+}
