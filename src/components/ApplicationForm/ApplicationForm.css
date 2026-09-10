@@ -1,0 +1,105 @@
+.ctnApplication{
+    width: 100%;
+    padding: 5rem 0;
+    background: var(--skyblue-bg-1);
+        background: linear-gradient(126.97deg, rgb(0, 48, 161) 0.91%, rgb(0, 10, 35) 67.25%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.ctnApplication .application{
+    width: 100%;
+    max-width: var(--maxW);
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 4rem;
+    z-index: 1;
+}
+
+.ctnApplication .applicationTxt{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+
+.ctnApplication .applicationTxt h2{
+    font-size: 2rem;
+    font-weight: 500;
+    /* color: var(--primary); */
+    color: white;
+}
+
+.ctnApplication .applicationTxt p{
+    max-width: 25rem;
+    font-size: 1rem;
+    /* color: var(--txt); */
+    color: white;
+}
+
+.ctnApplication form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: var(--border);
+    width: 25rem;
+}
+.ctnApplication form h2{
+    color: var(--primary);
+}
+.ctnApplication .inputGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.ctnApplication .inputGroup label{
+    font-size: 0.9rem;
+    color: var(--txt);
+}
+
+.ctnApplication .inputGroup input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--skyblue-bg-2);
+    border-radius: 0.7rem;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.ctnApplication .inputGroup input:focus{
+    border-color: var(--primary);
+}
+
+.ctnApplication form button{
+    align-self: flex-start;
+}
+.ctnApplication .ctnCards{
+    position: absolute;
+    width: 50%;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+}
+.ctnApplication .ctnCards img{
+    position: absolute;
+    width: 15rem;
+    left: 50%;
+    top: 50%;
+}
+.ctnApplication .ctnCards img:nth-of-type(1){
+    transform: rotate(-70deg) translate(-60%, 100%);
+}
+.ctnApplication .ctnCards img:nth-of-type(2){
+    transform: rotate(-90deg) translate(-70%, 0%);
+}
+.ctnApplication .ctnCards img:nth-of-type(3){
+    transform: rotate(-120deg) translate(-60%, -100%);
+}

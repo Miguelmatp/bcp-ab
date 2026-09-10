@@ -1,13 +1,16 @@
 .ctnBenefits{
     width: 100%;
-    padding: 3rem 0;
-    background: var(--skyblue-bg);
+    padding: 6rem 0 7rem;
+    /* background: var(--skyblue-bg); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ctnBenefits .benefits{
     width: 100%;
     max-width: var(--maxW);
-    margin: 0 auto;
+    /* margin: 0 auto; */
     display: flex;
     flex-direction: column;
     gap: 2rem;
