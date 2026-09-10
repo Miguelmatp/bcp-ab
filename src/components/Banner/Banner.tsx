@@ -1,13 +1,27 @@
-import "./Banner.css"
-// import bannerCard from "../../assets/images/tarjeta.webp";
-import isotipo from "../../assets/images/isotipo2.webp";
+import { useState } from "react";
+import "./Banner.css";
+import isotipoNaranja from "../../assets/images/isotipo-naranja.webp";
+import isotipoAzul from "../../assets/images/isotipo-azul.webp";
 import clasica from "../../assets/images/qore-clasica.webp";
 import oro from "../../assets/images/qore-oro.webp";
 import platinum from "../../assets/images/qore-platinum.webp";
 
-function HeroBanner() {
+function Banner() {
+  const [variant] = useState<"A" | "B">(() => {
+    const savedVariant = sessionStorage.getItem("bcp-ab-variant");
+
+    if (savedVariant === "A" || savedVariant === "B") {
+      return savedVariant;
+    }
+
+    const newVariant = Math.random() < 0.5 ? "A" : "B";
+
+    sessionStorage.setItem("bcp-ab-variant", newVariant);
+
+    return newVariant;
+  });
   return (
-    <section className="ctnBanner">
+    <section className={`ctnBanner banner--${variant.toLowerCase()}`}>
       <div className="banner">
         <div className="ctnTxt">
           <h1>¡Elige la tarjeta <br></br>que mejor <br></br>se  adapta a ti!</h1>
@@ -31,12 +45,16 @@ function HeroBanner() {
               <path d="m21 3-9 9"/>
               <path d="M15 3h6v6"/>
             </svg>
-            Solicita ahora
+            {variant === "A" ? "Solicita ahora" : "Aplica ya"}
           </button>
         </div>
         
         <div className="ctnImg">
-          <img className="isotipo" src={isotipo} alt="Isotipo BCP" />
+          <img
+            className="isotipo"
+            src={variant === "A" ? isotipoNaranja : isotipoAzul}
+            alt="Isotipo BCP"
+          />
         </div>
         <div className="ctnCards">
           <img className="card" src={clasica} alt="Isotipo BCP" />
@@ -48,4 +66,4 @@ function HeroBanner() {
   );
 }
 
-export default HeroBanner;
+export default Banner;

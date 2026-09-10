@@ -1,5 +1,5 @@
 .ctnBanner{
-    background: var(--skyblue-bg-2);
+    background: var(--primary);
     height: 22rem;
     display: flex;
     align-items: center;
@@ -31,10 +31,12 @@
     height: 100%;
 }
 .ctnBanner .banner .ctnImg img{
-    height: 100%;
+    position: relative;
+    height: 122%;
     width: auto;
     transform: translateX(-100vw);
     animation: isotipoEntrada 0.8s ease-out forwards;
+    top: -2rem;
 }
 
 @keyframes isotipoEntrada{
@@ -50,6 +52,7 @@
 .ctnBanner .banner .ctnTxt p,
 .ctnBanner .banner .ctnTxt button{
     opacity: 0;
+    color: white;
 }
 .ctnBanner .banner .ctnTxt h1{
     animation: aparecer 0.5s ease-out 0.3s forwards;
@@ -91,15 +94,15 @@
 }
 .ctnBanner .ctnCards img:nth-of-type(1){
     z-index: 4;
-    animation: cardEntrada1 2.5s ease-out 0.2s forwards;
+    animation: cardEntrada1 1s ease-out 0.2s forwards;
 }
 .ctnBanner .ctnCards img:nth-of-type(2){
     z-index: 3;
-    animation: cardEntrada2 2.5s ease-out 0.2s forwards;
+    animation: cardEntrada2 1s ease-out 0.2s forwards;
 }
 .ctnBanner .ctnCards img:nth-of-type(3){
     z-index: 2;
-    animation: cardEntrada3 2.5s ease-out 0.2s forwards;
+    animation: cardEntrada3 1s ease-out 0.2s forwards;
 }
 @keyframes cardEntrada1{
     0%{
@@ -133,4 +136,16 @@
     100%{
         transform: translate(-20%, -90%) rotate(40deg);
     }
+}
+
+.ctnBanner.banner--a{
+    background: var(--primary);
+}
+
+.ctnBanner.banner--b{
+    background: var(--secundary);
+}
+
+.ctnBanner.banner--b button{
+    background-color: var(--primary);
 }
