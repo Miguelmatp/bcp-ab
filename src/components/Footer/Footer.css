@@ -1,0 +1,76 @@
+.ctnFooter{
+    width: 100%;
+    background: white;
+    color: white;
+    padding-top: 3rem;
+}
+
+.ctnFooter .footer{
+    width: 100%;
+    max-width: var(--maxW);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+}
+
+.ctnFooter .footerBrand,
+.ctnFooter .footerLinks,
+.ctnFooter .footerSocial{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ctnFooter .footerBrand h2{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.ctnFooter .footerBrand p{
+    max-width: 16rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    color: var(--txt);
+}
+
+.ctnFooter .footerLinks h3,
+.ctnFooter .footerSocial h3{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.ctnFooter .footerLinks a,
+.ctnFooter .footerSocial a{
+    width: fit-content;
+    color: var(--txt);
+    font-size: 0.9rem;
+    transition: opacity 0.2s ease;
+}
+
+.ctnFooter .footerLinks a:hover,
+.ctnFooter .footerSocial a:hover{
+    opacity: 0.7;
+}
+
+.ctnFooter .footerSocial > div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.ctnFooter .footerBottom{
+    border-top: 1px solid #dedede;
+    padding: 0.8rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ctnFooter .footerBottom p{
+    font-size: 0.8rem;
+    color: var(--txt);
+}
